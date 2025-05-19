@@ -1,48 +1,48 @@
 # automation-demo
-# 🤖 LLM-Powered TestCafe Script Generator Demo
+#  LLM-Powered TestCafe Script Generator Demo
 
 This repository hosts a **demo web application** designed to showcase the capabilities of an **LLM-powered TestCafe script generator**, using:
 
-- 🧠 **Mistral** (via [Ollama](https://ollama.com)) for test script generation
-- ⚙️ **TestCafe** for automation execution
-- 💻 A lightweight HTML/CSS/JS frontend for real-world UI interactions
+-  **Mistral** (via [Ollama](https://ollama.com)) for test script generation
+-  **TestCafe** for automation execution
+-  A lightweight HTML/CSS/JS frontend for real-world UI interactions
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
-👉 [Visit the demo site on GitHub Pages](https://your-username.github.io/automation-demo/)  
+ [Visit the demo site on GitHub Pages](https://your-username.github.io/automation-demo/)  
 *(Replace `your-username` with your GitHub username)*
 
 Use this site as the **target application** for generating TestCafe scripts automatically with natural language prompts.
 
 ---
 
-## 🧪 Demo Features
+##  Demo Features
 
 This site includes several testable elements commonly used in web automation:
 
-### 🔐 Login Page
+###  Login Page
 - Test valid and invalid login flows
 - Credentials:
   - Username: `admin`
   - Password: `password123`
 - Shows error message on failure
 
-### 📝 Form Submission
+###  Form Submission
 - Inputs: Name, Email
 - Dropdown: Country selection
 - Confirmation message shown after submit
 
-### 🚨 Button with Alert
+###  Button with Alert
 - Tests alert handling with JavaScript `alert()`
 
-### 📊 Sample Data Table
+###  Sample Data Table
 - Useful for row counting, content verification, filtering logic
 
 ---
 
-## 🧠 LLM-Powered TestCafe Generation
+##  LLM-Powered TestCafe Generation
 
 This site is used as a **sandbox application** for a system that allows you to:
 
