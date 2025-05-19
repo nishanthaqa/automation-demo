@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Automation Demo Site</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      color: #333;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .error-message {
+      color: #e74c3c;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    #dashboard {
+      display: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .btn-alert {
+      background-color: #f39c12;
+    }
+
+    .btn-alert:hover {
+      background-color: #e67e22;
+    }
+
+    #form-message {
+      margin-top: 15px;
+      color: green;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN SECTION -->
+  <div class="container" id="login-section">
+    <h2>Automation Demo Dashboard</h2>
+    <h3>🔐 Login</h3>
+    <form id="login-form">
+      <label for="username">Username</label>
+      <input type="text" id="username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">Login</button>
+    </form>
+    <p id="login-error" class="error-message"></p>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div class="container" id="dashboard">
+    <h2>QScriptor - LLM-powered TestCafe script generator</h2>
+    <!--<h2>🎯 Automation Demo Dashboard</h2>-->
+
+    <!-- Form Automation -->
+    <div class="section">
+      <h3>Automation Demo Dashboard</h3>
+      <form id="demo-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="">--Select--</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="Sri Lanka">Sri Lanka</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="form-message"></p>
+    </div>
+
+    <!-- Button & Alert -->
+    <div class="section">
+      <h3>Button & Alert</h3>
+      <button class="btn-alert" onclick="alert('You clicked a button!')">Click Me</button>
+    </div>
+
+    <!-- Table -->
+    <div class="section">
+      <h3>Sample Data Table</h3>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Kasun</td><td>Active</td></tr>
+          <tr><td>2</td><td>Udara</td><td>Inactive</td></tr>
+          <tr><td>3</td><td>Basuru</td><td>Pending</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    // Login Logic
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const error = document.getElementById('login-error');
+
+      if (username === 'admin' && password === 'password123') {
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        error.textContent = '';
+      } else {
+        error.textContent = 'Invalid username or password.';
+      }
+    });
+
+    // Form Submission Logic
+    document.getElementById('demo-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const country = document.getElementById('country').value;
+      document.getElementById('form-message').textContent = `Thanks ${name} from ${country}!`;
+    });
+  </script>
+</body>
+</html>
