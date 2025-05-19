@@ -1,4 +1,3 @@
-# automation-demo
 #  LLM-Powered TestCafe Script Generator Demo
 
 This repository hosts a **demo web application** designed to showcase the capabilities of an **LLM-powered TestCafe script generator**, using:
