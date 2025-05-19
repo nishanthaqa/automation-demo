@@ -10,8 +10,7 @@ This repository hosts a **demo web application** designed to showcase the capabi
 
 ##  Live Demo
 
- [Visit the demo site on GitHub Pages](https://your-username.github.io/automation-demo/)  
-*(Replace `your-username` with your GitHub username)*
+ [Visit the demo site on GitHub Pages](https://nishanthaqa.github.io/automation-demo/)  
 
 Use this site as the **target application** for generating TestCafe scripts automatically with natural language prompts.
 
